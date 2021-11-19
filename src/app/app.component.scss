@@ -1,0 +1,25 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: 32px;
+  height: 100%;
+}
+
+//.mat-select {
+//  max-height: 10px;
+//}
+
+button {
+  &.image {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+.header-icons {
+  margin-right: 8px;
+}
