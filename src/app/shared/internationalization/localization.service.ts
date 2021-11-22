@@ -34,7 +34,7 @@ export class LocalizationService {
    */
   public initService(): Promise<void> {
     // language code same as file name.
-    this._localeId = localStorage.getItem('language') || 'en-US';
+    this._localeId = localStorage.getItem('language') || 'uk-UA';
     return this.useLanguage(this._localeId);
   }
 

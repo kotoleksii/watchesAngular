@@ -1,30 +1,19 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>WP24</span>
-  <span class="example-spacer"></span>
-  <div class="header-icons">
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
-            style="background:url('/assets/img/1217136_whatsapp_icon.svg')">
-      <!--    <mat-icon>favorite</mat-icon>-->
+  <mat-toolbar-row>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
     </button>
-  </div>
-  <div class="header-icons">
-    <button mat-icon-button class="example-icon" class="image" aria-label="Example icon-button with share icon"
-            style="background:url('/assets/img/icon_new-white.svg')">
-      <!--    <mat-icon>share</mat-icon>-->
-    </button>
-  </div>
+<!--    <span>WP24</span>-->
 
-  <div class="auto-width">
-    <mat-form-field appearance="legacy">
-      <mat-select name="language" [(ngModel)]='language' (ngModelChange)="onSelect($event)">
-        <mat-option value="en-US"><span class="flag-icon flag-icon-gb"></span> EN</mat-option>
-        <mat-option value="uk-UA"><span class="flag-icon flag-icon-ua"></span> UA</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+    <span class="example-spacer"><mat-icon>alarm</mat-icon>WP24</span>
+
+    <mat-button-toggle-group name="language" [(ngModel)]='language' (ngModelChange)="onSelect($event)">
+      <mat-button-toggle *ngFor="let opt of languages" [value]="opt.value"><span [class]="opt.flag"></span>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+
+
+  </mat-toolbar-row>
 </mat-toolbar>
 <div class="content">
   <router-outlet></router-outlet>
@@ -42,3 +31,20 @@
 
 <!--<router-outlet></router-outlet>-->
 <!--<notifier-container></notifier-container>-->
+
+
+<!--Localization Select-->
+<!--      <div class="auto-width">-->
+<!--        <mat-form-field>-->
+<!--          <mat-select [value]="language.value" (valueChange)="onSelect($event)">-->
+<!--&lt;!&ndash;                    <mat-select-trigger>&ndash;&gt;-->
+<!--&lt;!&ndash;                      <span [class]="language.flag"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash;          <span>{{ language.label }}</span>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    </mat-select-trigger>&ndash;&gt;-->
+<!--            <mat-option *ngFor="let opt of languages" [value]="opt.value">-->
+<!--              <span [class]="opt.flag"></span>-->
+<!--              <span>{{ opt.label }}</span>-->
+<!--            </mat-option>-->
+<!--          </mat-select>-->
+<!--        </mat-form-field>-->
+<!--      </div>-->

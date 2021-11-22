@@ -17,6 +17,11 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
+import {MatListModule} from "@angular/material/list";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatCardModule} from "@angular/material/card";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 /**
  * The http loader factory : Loads the files from define path.
@@ -37,6 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule,
+    MatListModule,
     NotifierModule,
     HttpClientModule,
     FormsModule,
@@ -53,11 +59,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {
 }
-

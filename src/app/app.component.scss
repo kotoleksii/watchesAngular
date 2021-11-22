@@ -1,9 +1,11 @@
 .example-spacer {
   flex: 1 1 auto;
+  text-align: center;
+  padding-left: 30px;
 }
 
 .content {
-  padding: 32px;
+  padding: 0px;
   height: 100%;
 }
 
@@ -23,3 +25,18 @@ button {
 .header-icons {
   margin-right: 8px;
 }
+
+.mat-link {
+  //cursor: pointer;
+  text-decoration: underline;
+}
+
+.mat-select-hide-underline .mat-form-field-underline {
+  display: none;
+}
+
+.mat-button-toggle-group {
+  height: 25px;
+  align-items: center;
+}
+
