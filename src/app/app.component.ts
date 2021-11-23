@@ -17,8 +17,8 @@ export class AppComponent {
   //language: string = 'en-US';
 
   public languages: ILocal[] = [
-    {value: 'en-US', label: ' EN', flag: 'flag-icon flag-icon-gb'},
     {value: 'uk-UA', label: ' UA', flag: 'flag-icon flag-icon-ua'},
+    {value: 'ru-RU', label: ' RU', flag: 'flag-icon flag-icon-ru'},
   ];
 
   // language = this.languages[1].value;
@@ -26,10 +26,10 @@ export class AppComponent {
   language = this.getLocal();
 
   getLocal(): any {
-    if ((localStorage.getItem('language') === this.languages[0].value)) {
-      return this.languages[0].value;
+    if ((localStorage.getItem('language') === this.languages[1].value)) {
+      return this.languages[1].value;
     }
-    return this.languages[1].value;
+    return this.languages[0].value;
   }
 
   get name(): string {

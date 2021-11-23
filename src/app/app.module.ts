@@ -63,7 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatSlideToggleModule,
     MatCardModule,
     MatProgressBarModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -7,6 +7,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatButtonModule} from "@angular/material/button";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {MatButtonModule} from "@angular/material/button";
     MatCardModule,
     MatProgressBarModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule,
   ]
 })
 export class HomeModule {

@@ -1,35 +1,91 @@
-<div class="main-div">
-  <mat-card class="example-card mat-elevation-z0 outline">
-    <mat-card-title style="padding-bottom: 20px"><h1>{{ 'banner.hello' | translate }}{{ name }}!</h1></mat-card-title>
-    <mat-card-content>
-      <h3>+38-098-729-27-18</h3>
-      <h3>+38-066-967-47-58</h3>
-      <h3>+38-093-467-71-91</h3>
-    </mat-card-content>
-    <mat-divider inset></mat-divider>
-    <mat-card-actions>
-      <button mat-button><img src="/assets/img/vbIcon.png" alt=""></button>
-      <button mat-button><img src="/assets/img/wuIcon.png" alt=""></button>
-    </mat-card-actions>
-    <mat-card-footer>
-      <!--      <mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
-    </mat-card-footer>
-  </mat-card>
-</div>
+<!--<div class="main-div">-->
+<!--  <mat-card class="example-card mat-elevation-z0 outline">-->
+<!--    <mat-card-title style="padding-bottom: 20px"><h1>{{ 'banner.hello' | translate }}{{ name }}!</h1></mat-card-title>-->
+<!--    <mat-card-content>-->
+<!--      <h3>+38-098-729-27-18</h3>-->
+<!--      <h3>+38-066-967-47-58</h3>-->
+<!--      <h3>+38-093-467-71-91</h3>-->
+<!--    </mat-card-content>-->
+<!--    <mat-divider inset></mat-divider>-->
+<!--    <mat-card-actions>-->
+<!--      <button mat-button><img src="/assets/img/vbIcon.png" alt=""></button>-->
+<!--      <button mat-button><img src="/assets/img/wuIcon.png" alt=""></button>-->
+<!--    </mat-card-actions>-->
+<!--    <mat-card-footer>-->
+<!--      &lt;!&ndash;      <mat-progress-bar mode="indeterminate"></mat-progress-bar>&ndash;&gt;-->
+<!--    </mat-card-footer>-->
+<!--  </mat-card>-->
+<!--</div>-->
 
+<!--<div class="main-div">-->
+<!--  <mat-card class="text-card mat-elevation-z0 outline">-->
+<!--    <mat-card-title style="padding-bottom: 20px">-->
+<!--      <h1>ТЕРМІНОВЕ ПРИДБАННЯ ГОДИННИКА.</h1>-->
+<!--      <h1>ЗАПОРІЖЖЯ, ДНІПРО І ПО ВСІЙ УКРАЇНІ!</h1>-->
+<!--    </mat-card-title>-->
+<!--    <mat-card-content>-->
+<!--      <h3>Оцінка. Викуп Швейцарського годинника.</h3>-->
+<!--      <h3>Швидко. Вигідно. Виїзд спеціаліста.</h3>-->
+<!--      <h3>Можлива оцінка та покупка Он-лайн.</h3>-->
+<!--      <h3>Повна конфіденційність та безпека нашої угоди.</h3>-->
+<!--      <h3>Якщо Ви хочете вигідно продати годинник</h3>-->
+<!--      <h3>Звертайтесь до нас!</h3>-->
+<!--    </mat-card-content>-->
+<!--  </mat-card>-->
+<!--</div>-->
 <div class="main-div">
-  <mat-card class="text-card mat-elevation-z0 outline">
-    <mat-card-title style="padding-bottom: 20px">
-      <h1>ТЕРМІНОВЕ ПРИДБАННЯ ГОДИННИКА.</h1>
-      <h1>ЗАПОРІЖЖЯ, ДНІПРО І ПО ВСІЙ УКРАЇНІ!</h1>
-    </mat-card-title>
-    <mat-card-content>
-      <h3>Оцінка. Викуп Швейцарського годинника.</h3>
-      <h3>Швидко. Вигідно. Виїзд спеціаліста.</h3>
-      <h3>Можлива оцінка та покупка Он-лайн.</h3>
-      <h3>Повна конфіденційність та безпека нашої угоди.</h3>
-      <h3>Якщо Ви хочете вигідно продати годинник</h3>
-      <h3>Звертайтесь до нас!</h3>
-    </mat-card-content>
-  </mat-card>
-</div>
+  <div class="content">
+        <mat-card class="header-card mat-elevation-z6">
+          <mat-card-title>
+            <h1>{{'header_card.title' | translate}}</h1>
+          </mat-card-title>
+          <mat-card-content>
+            <h3>{{'header_card.message' | translate}}</h3>
+          </mat-card-content>
+        </mat-card>
+<!--    <div class="content">-->
+      <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="100%">
+          <mat-card class="contact-card mat-elevation-z6">
+            <mat-card-title style="padding-bottom: 30px"><h1>{{ 'contact_card.title' | translate }}{{ name }}!</h1>
+            </mat-card-title>
+            <mat-card-content>
+              <h3>+38-098-729-27-18</h3>
+              <h3>+38-066-967-47-58</h3>
+              <h3>+38-093-467-71-91</h3>
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions>
+              <button mat-icon-button><img src="/assets/img/vbIcon.png" alt=""></button>
+              <button mat-icon-button><img src="/assets/img/wuIcon.png" alt=""></button>
+              <button mat-icon-button>Fb</button>
+              <button mat-icon-button>In</button>
+            </mat-card-actions>
+            <mat-card-footer>
+              <!--            <mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
+            </mat-card-footer>
+          </mat-card>
+        </div>
+
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="100%">
+          <mat-card class="swiss-card mat-elevation-z6">
+            <mat-card-title style="padding-bottom: 20px">
+              <h1>{{'swiss_card.message' | translate}}{{name}}</h1>
+            </mat-card-title>
+            <mat-card-content>
+              <marquee behavior="scroll" direction="left">
+                <pre>{{randText}}</pre>
+              </marquee>
+            </mat-card-content>
+            <!--          <mat-divider inset></mat-divider>-->
+            <mat-card-actions>
+            </mat-card-actions>
+            <mat-card-footer>
+              <h1>{{'swiss_card.footer' | translate}}</h1>
+            </mat-card-footer>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--</div>-->
